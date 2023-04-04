@@ -1,0 +1,10 @@
+
+{
+    "LANGUAGEOPTION":{"CAPTION":"ভাষা চয়ন করুন"},
+    "MENU":{
+        "HOME":"বাড়ি",
+        "LOGIN":"লগইন",
+        "LOGOUT": "লগআউট"
+    }
+ }
+ 

@@ -1,0 +1,30 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Details</th>
+            <th>Price</th>
+            <th>Photo</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ppp of myProducts; let i=index">
+                <td>{{ppp.pname}}</td>
+                <td>{{ppp.details}}</td>
+                <td>Rs{{ppp.price}}</td>
+                <td><img src={{ppp.photo}}/></td>
+                <td><button mat-icon-button (click)="onAdd(ppp.pid,ppp.price)">
+                    <mat-icon>add</mat-icon>
+                </button></td>
+                <td><button mat-icon-button (click)="onDelete(i,ppp.price)">
+                    <mat-icon>delete</mat-icon>
+                </button></td>
+            </tr>
+        </tbody>
+</table>
+<div style="position:absolute;right:200px;">
+TotalPrice=Rs{{this.cart.itemsValue}}<br/>
+TotalItems {{this.items.length}}
+</div>
+ 

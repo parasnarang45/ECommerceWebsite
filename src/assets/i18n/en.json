@@ -1,0 +1,8 @@
+{
+   "LANGUAGEOPTION":{"CAPTION":"Choose Language"},
+   "Home":{
+       "HOME":"home",
+       "LOGIN":"login",
+       "LOGOUT":"logout"
+   }
+}

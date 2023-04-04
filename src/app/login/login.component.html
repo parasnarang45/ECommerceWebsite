@@ -1,0 +1,21 @@
+ <form [formGroup]="frm1" (ngSubmit)="f1(email,password)">
+<div class="container">
+    <div style="position:absolute;left:500px;bottom:200px;">
+<mat-form-field appearance="fill">
+    <mat-label>Email</mat-label><br/>
+    <input matInput type="text" placeholder="Enter your email" formControlName="email" #email required/><br/>
+    <div *ngIf="!frm1.controls.email.valid&& frm1.controls.email.touched">
+        <div style="color:red;">Enter valid mail</div>
+    </div>
+</mat-form-field><br/>
+<mat-form-field appearance="fill">
+    <mat-label>Password</mat-label><br/>
+    <input matInput type="password" placeholder="Enter your password" formControlName="password" #password required/>
+    <div *ngIf="!frm1.controls.password.valid && frm1.controls.password.touched">
+        <div style="color:red;">Enter valid password</div>
+    </div>
+</mat-form-field><br/>
+<input type="submit" value="login" class="btn btn-success">
+</div>
+</div>
+</form>
