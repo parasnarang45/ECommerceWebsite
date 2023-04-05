@@ -24,9 +24,12 @@ export class AppComponent {
   }
   title = 'App25';
 
-   onselectLang()
-   {
+   onselectLang(lang:any)
+   { 
+      console.log(lang);
+      this.translate.use(lang);
 
+     
    }
    ngOnInit():void{
   

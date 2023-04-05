@@ -10,9 +10,8 @@
 <mat-label>{{'LANGUAGEOPTION.CAPTION' | translate}}</mat-label>
 </div>
 <div style="position:absolute;right:30px;">
-      <select (click)="onselectLang()">
-        <option>English</option>
-        <option>Bangla</option>
+      <select  #selectlang (click)="onselectLang(selectlang.value)">
+        <option *ngFor="let item of supportLanguages">{{item}}</option>
         </select>
 </div>
 <div style="position:absolute;right:350px;">
