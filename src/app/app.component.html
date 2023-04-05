@@ -1,21 +1,21 @@
 <mat-toolbar color="primary">
     <button mat-button *ngIf="!sharedData.isLoggedin(); else elseblock">
-<a mat-button routerLink="login">{{'HOME.LOGIN'| translate}}</a>
+<a mat-button routerLink="login">{{'Home.LOGIN'| translate}}</a>
 </button>
-<a mat-button routerLink="home">{{'HOME.HOME'| translate }}</a>
+<a mat-button routerLink="home">{{'Home.HOME'| translate }}</a>
 <ng-template #elseblock>
-    <a mat-button routerLink="logout">{{'HOME.LOGOUT'| translate }}</a> 
+    <a mat-button routerLink="logout">{{'Home.LOGOUT'| translate }}</a> 
 </ng-template>
 <div style="position:absolute;right:140px;">
 <mat-label>{{'LANGUAGEOPTION.CAPTION' | translate}}</mat-label>
 </div>
 <div style="position:absolute;right:30px;">
-      <select>
+      <select (click)="onselectLang()">
         <option>English</option>
         <option>Bangla</option>
         </select>
 </div>
-<div style="position:absolute;right:290px;">
+<div style="position:absolute;right:350px;">
 <a mat-button routerLink="cart">
 <button mat-icon-button *ngIf="this.items.length; else elseblock2">
     <mat-icon matBadge="{{this.cart.getItems().length}}" matBadgeColor="accent">shopping_cart</mat-icon>

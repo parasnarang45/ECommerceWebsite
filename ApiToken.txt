@@ -1,0 +1,20 @@
+Create an online mini store web app
+1.Login Page - Functionality
+● Login - User would enter Email & Password to login
+○ Email
+○ Password
+○ [Login Button]
+● Use below API for login after successfully login navigate the user to a ‘home page’
+make sure to provide logout option in home page
+● Make sure the user can’t access the homepage without login.
+● Once a user is logged in, He can’t access the login page.
+API’s to call for Login.
+URL: https://reqres.in/api/login
+METHOD: POST
+BODY:
+{
+"email": "eve.holt@reqres.in",
+"password": "pistol"
+}
+BODY TYPE: JSON
+Postman

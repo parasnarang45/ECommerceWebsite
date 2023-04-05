@@ -22,6 +22,7 @@ import { MatInputModule } from '@angular/material/input';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule, NgxUiLoaderRouterModule } from 'ngx-ui-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { EmptyCartComponent } from './empty-cart/empty-cart.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http,'assets/i18n/', '.json');
@@ -34,7 +35,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     LogoutComponent,
     ProductdetailsComponent,
     CartComponent,
-    HomeComponent
+    HomeComponent,
+    EmptyCartComponent
   ],
   imports: [
     BrowserModule,

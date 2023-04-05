@@ -20,11 +20,14 @@ export class AppComponent {
        const browserlang=this.translate.getBrowserLang();
      console.log(browserlang);
     translate.use('en');
-    console.log('HOME.TITLE');
+    
   }
   title = 'App25';
 
+   onselectLang()
+   {
 
+   }
    ngOnInit():void{
   
    }

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { CartService } from '../cart.service';
 import { Product } from '../product';
 import { SharedService } from '../shared.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-productdetails',
@@ -13,7 +14,7 @@ export class ProductdetailsComponent {
   data:any=[];
   items=this.cart.getItems();
   myProducts:any=[];
-  constructor(public sharedData:SharedService,public cart:CartService,public http:HttpClient){
+  constructor(public sharedData:SharedService,public cart:CartService,public http:HttpClient,public router:Router){
        for(let i=0;i<=this.items.length;i++){
         this.http.get<Product>("https://api.webroot.net.in/products.php?pid="+this.items[i]).subscribe(data=>{
           let pp = new Product()
