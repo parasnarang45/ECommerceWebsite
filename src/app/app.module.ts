@@ -26,11 +26,12 @@ import { EmptyCartComponent } from './empty-cart/empty-cart.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http,'assets/i18n/', '.json');
+  return new TranslateHttpLoader(http,'assets/login/', '.json');
 }
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
     LoginComponent,
     LogoutComponent,
     ProductdetailsComponent,

@@ -3,6 +3,17 @@
    "Home":{
        "HOME":"Home",
        "LOGIN":"Login",
-       "LOGOUT":"Logout"
+       "LOGOUT":"Logout",
+       "label": "Email",
+       "placeholder1":"Enter your email",
+       "label2" :"Password",
+       "placeholder2": "Enter your password",
+       "value":"login"
+       
+       
+               
+
    }
+    
+    
 }

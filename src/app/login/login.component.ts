@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { SharedService } from '../shared.service';
 import { Users } from '../users';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,8 @@ import { Users } from '../users';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor( public sharedData:SharedService,private toastr:ToastrService,public router:Router){}
+  supportLanguages=['en','bn']
+  constructor( public sharedData:SharedService,private toastr:ToastrService,public router:Router,public translate:TranslateService){}
  frm1=new FormGroup({
   'email':new FormControl('',[Validators.email,Validators.required]),
   'password':new FormControl('',[Validators.required,Validators.minLength(4)])
@@ -39,4 +41,12 @@ export class LoginComponent {
 
    }
 }
-}
+   ngOnInit():void{
+    this.translate.addLangs(this.supportLanguages);
+    this.translate.setDefaultLang('en');
+    const browserlang=this.translate.getBrowserLang();
+    this.translate.use('en');
+   }
+
+   }
+

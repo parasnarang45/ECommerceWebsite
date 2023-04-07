@@ -1,0 +1,12 @@
+{
+     
+    "login":{
+        
+         "label1":"Email",
+         "placeholder1":"Enter your email",
+         "label2" :"Password",
+         "placeholder2": "Enter your password"
+         
+         
+    }
+}
