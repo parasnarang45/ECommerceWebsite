@@ -1,4 +1,5 @@
 <mat-toolbar color="primary">
+    <img src="assets/angular_whiteTransparent.png" style="width:30px;">
     <button mat-button *ngIf="!sharedData.isLoggedin(); else elseblock">
 <a mat-button routerLink="login">{{'Home.LOGIN'| translate}}</a>
 </button>
@@ -23,16 +24,14 @@
     <mat-icon>shopping_cart</mat-icon>
 </ng-template>
 </div>
-</mat-toolbar><br/>
+</mat-toolbar>
 <ngx-ui-loader
 text="Please wait.."
 > 
 </ngx-ui-loader>
-    <router-outlet></router-outlet><br/>
-
+    <router-outlet></router-outlet>
     <div style="position:absolute;bottom:10px; text-align:center;"> All Rights Reserved Copyrights</div>
- 
-    <img src="assets/istockphoto-1215380721-1024x1024.jpg" style="width:150%;opacity:0.5;position:absolute;z-index:-1;">
-
+    <img src="assets/brooke-cagle-WHWYBmtn3_0-unsplash.jpg" style="width:150%;opacity:1;position:absolute;z-index:-1;">
+    
 
 

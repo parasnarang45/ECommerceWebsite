@@ -12,7 +12,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   items=this.cart.getItems();
-  supportLanguages=['en','bn']
+  supportLanguages=['en','bn','fr','de']
   blur:number=10;
   constructor(public toastr:ToastrService, public sharedData:SharedService,public cart:CartService,private ngxService:NgxUiLoaderService,public translate:TranslateService){
     this.translate.addLangs(this.supportLanguages);
