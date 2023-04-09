@@ -23,10 +23,12 @@ import { NgxUiLoaderHttpModule, NgxUiLoaderModule, NgxUiLoaderRouterModule } fro
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { EmptyCartComponent } from './empty-cart/empty-cart.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { InformationComponent } from './information/information.component';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http,'assets/i18n/', '.json');
-  return new TranslateHttpLoader(http,'assets/login/', '.json');
 }
 
 @NgModule({
@@ -37,7 +39,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProductdetailsComponent,
     CartComponent,
     HomeComponent,
-    EmptyCartComponent
+    EmptyCartComponent,
+    InformationComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatSelectModule,
     MatCardModule,
     MatIconModule,
+    MatStepperModule,
     NgxUiLoaderModule,
+    AngularSvgIconModule.forRoot({
+  
+    }),
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,

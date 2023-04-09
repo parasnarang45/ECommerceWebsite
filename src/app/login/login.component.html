@@ -1,21 +1,26 @@
  <form [formGroup]="frm1" (ngSubmit)="f1(email,password)">
 <div class="container">
     <div style="position:absolute;left:500px;bottom:200px;">
-<mat-form-field appearance="fill">
-    <mat-label>Email</mat-label><br/>
+        <div class="text-success" style="text-align:center;">
+            <h1><b>{{'Home.Heading' | translate }}</b></h1>
+        </div>
+<mat-icon>person</mat-icon><mat-form-field appearance="fill">
+    <mat-label>{{'Home.label1'| translate }}</mat-label>
     <input matInput type="text" placeholder="Enter your email" formControlName="email" #email required/><br/>
     <div *ngIf="!frm1.controls.email.valid&& frm1.controls.email.touched">
-        <div style="color:red;">Enter valid mail</div>
+        <div style="color:red;">{{'Home.Error1'| translate}}</div>
     </div>
 </mat-form-field><br/>
-<mat-form-field appearance="fill">
-    <mat-label>Password</mat-label><br/>
+<mat-icon>lock</mat-icon><mat-form-field appearance="fill">
+    <mat-label>{{'Home.label2'| translate }}</mat-label>
     <input matInput type="password" placeholder="Enter your password" formControlName="password" #password required/>
     <div *ngIf="!frm1.controls.password.valid && frm1.controls.password.touched">
-        <div style="color:red;">Enter valid password</div>
+        <div style="color:red;">{{'Home.Error2'| translate}}</div>
     </div>
 </mat-form-field><br/>
-<input type="submit" value="login" class="btn btn-success">
+<div style="position:absolute;left:10px;">
+<button type="submit" [disabled]="!frm1.valid" class="btn btn-success">{{'Home.value'| translate}}</button>
+</div>
 </div>
 </div>
 </form>

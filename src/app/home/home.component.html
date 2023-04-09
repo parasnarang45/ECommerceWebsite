@@ -3,18 +3,18 @@
 <mat-card  class="col-lg-4 col-sm-12" *ngFor="let p of products">
     <mat-card-header>
         <mat-card-title>
-            List of Products
+           {{'Home.Title'| translate }} 
         </mat-card-title>
     </mat-card-header>
     <mat-card-content>
         {{p.pname}}<br/>
         {{p.pid}}<br/>
-        Rs={{p.price}}<br/>
+        {{'Home.Price'| translate }}={{p.price}}<br/>
        <img src={{p.photo}}/>
     </mat-card-content>
     <mat-card-actions>
         <button mat-raised-button color="primary" (click)="addCart(p.pid,p.price)">
-        AddtoCart
+        {{'Home.Button' | translate}}
         </button>
     </mat-card-actions>
 </mat-card>

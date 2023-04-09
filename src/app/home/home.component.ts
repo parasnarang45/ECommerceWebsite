@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CartService } from '../cart.service';
 import { SharedService } from '../shared.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -11,14 +12,20 @@ import { SharedService } from '../shared.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  supportLanguages=['en','bn']
   products:any=[];
    items=this.cart.getItems()
-   constructor(public http:HttpClient,public sharedData:SharedService,public cart:CartService,public toastr:ToastrService,public router:Router){}
+   constructor(public http:HttpClient,public sharedData:SharedService,public cart:CartService,public toastr:ToastrService,public router:Router,public translate:TranslateService){}
 
    ngOnInit(): void {
     this.sharedData.getProducts().subscribe(data=>{
       console.log(data);
       this.products=data;
+      this.translate.addLangs(this.supportLanguages);
+      const browserLang=this.translate.getBrowserLang();
+      this.translate.setDefaultLang('en');
+      this.translate.addLangs(this.supportLanguages);
+      this.translate.use('en')
     })
 
     }
@@ -38,4 +45,5 @@ export class HomeComponent {
    
  
   }
+  
 }

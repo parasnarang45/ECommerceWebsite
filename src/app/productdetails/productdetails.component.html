@@ -1,18 +1,18 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Details</th>
-            <th>Price</th>
-            <th>Photo</th>
-            <th>Actions</th>
+            <th>{{'Home.name' | translate }}</th>
+            <th>{{'Home.details' | translate }}</th>
+            <th>{{'Home.price' | translate }}</th>
+            <th>{{'Home.photo' | translate }}</th>
+            <th>{{'Home.actions' |  translate }}</th>
         </tr>
         </thead>
         <tbody>
             <tr *ngFor="let ppp of myProducts; let i=index">
                 <td>{{ppp.pname}}</td>
                 <td>{{ppp.details}}</td>
-                <td>Rs{{ppp.price}}</td>
+                <td>{{'Home.Price'| translate }}{{ppp.price}}</td>
                 <td><img src={{ppp.photo}}/></td>
                 <td><button mat-icon-button (click)="onAdd(ppp.pid,ppp.price)">
                     <mat-icon>add</mat-icon>
@@ -24,7 +24,7 @@
         </tbody>
 </table>
 <div style="position:absolute;right:200px;">
-TotalPrice=Rs{{this.cart.itemsValue}}<br/>
-TotalItems {{this.items.length}}
+{{'Home.total1'| translate }}={{'Home.Price'| translate }}{{this.cart.itemsValue}}<br/>
+ {{'Home.total2' | translate }} {{this.items.length}}
 </div>
  

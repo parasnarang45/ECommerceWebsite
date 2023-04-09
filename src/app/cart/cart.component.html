@@ -1,7 +1,7 @@
 <mat-card *ngFor="let item of myProducts">
     <mat-card-header>
         <mat-card-title>
-            list of products
+            {{'Home.Title'| translate }} 
         </mat-card-title>
     </mat-card-header>
     <mat-card-content>
@@ -15,10 +15,10 @@
 </mat-card>
 <div style="position:absolute;right:200px;"><br/><br/>
     
-    Sub-Total  <h1>{{this.cart.itemsValue}}</h1><br/>
-<h1>{{items.length}}</h1>items<br/>
-<button mat-raised-button color="primary">
-    Checkout
+    {{'Home.total1'| translate }} <h1>{{this.cart.itemsValue}}</h1><br/>
+<h1>{{items.length}}</h1>{{'Home.total2' | translate}}<br/>
+<button mat-raised-button color="primary" (click)="onCheckout()">
+    {{'Home.button' | translate }}
 </button><br/><br/>
 
 </div>

@@ -1,0 +1,33 @@
+
+  
+        {
+            "LANGUAGEOPTION":{"CAPTION":"Choose Language"},
+            "Home":{
+               "HOME":"Maison",
+                 "LOGIN":"Connexion",
+                "LOGOUT":"Se déconnecter",
+                "label1": "E-mail",
+                "label2" :"Mot de passe",
+                "value":"connexion",
+                "Error1": "Entrez un courrier valide",
+                "Error2": "Entrez un mot de passe valide",
+                "Title" : "Liste des produits",
+                "Button" : "Ajouter au panier",
+                 "Price" : "Rs",
+                 "pname" : "Ordinateur portable",
+                 "name" :  "Nom",
+                 "details" : "Détails",
+                 "price" : "Prix",
+                 "photo" : "Photo",
+                 "actions": "Actions",
+                 "total1" : "Prix total",
+                 "total2" : "Articles au total",
+                 "button" : "Vérifier",
+                 "Heading" : "Connectez-vous à votre compte"
+             
+         
+         
+             
+                
+     }
+    }
