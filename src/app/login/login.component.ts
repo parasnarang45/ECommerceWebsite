@@ -35,7 +35,7 @@ export class LoginComponent {
         
       }
       else{
-        this.toastr.error('Login Failed')
+        this.toastr.error('Login Failed');
       }
      });
 
