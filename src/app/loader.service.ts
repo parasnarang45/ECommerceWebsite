@@ -6,10 +6,5 @@ import { Injectable } from '@angular/core';
 export class LoaderService {
 
   constructor() { }
-  private loading:boolean=false;
   
-  setLoading(loading:boolean)
-  {
-    this.loading=loading;
-  }
 }
