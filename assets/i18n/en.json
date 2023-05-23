@@ -1,0 +1,35 @@
+{
+   "LANGUAGEOPTION":{"CAPTION":"Choose Language"},
+   "Home":{
+      "HOME":"Home",
+        "LOGIN":"Login",
+       "LOGOUT":"Logout",
+       "label1": "Email",
+       "label2" :"Password",
+       "value":"login",
+       "Error1": "Enter valid mail",
+       "Error2": "Enter valid password",
+       "Title" : "List of Products",
+       "Button" : "AddtoCart",
+        "Price" : "Rs",
+        "pname" : "Laptop",
+        "name" :  "Name",
+        "details" : "Details",
+        "price" : "Price",
+        "photo" : "Photo",
+        "actions" : "Actions",
+        "total1" : "TotalPrice",
+        "total2" : "TotalItems",
+        "button" : "Checkout",
+        "Heading" : "Log in to your Account"
+    
+
+
+    
+       
+               
+
+   }
+    
+    
+}

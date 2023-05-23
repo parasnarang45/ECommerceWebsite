@@ -1,0 +1,35 @@
+
+ {
+    "LANGUAGEOPTION":{"CAPTION":"Sprache wählen"},
+    "Home":{
+       "HOME":"Einloggen Einloggen",
+        "LOGOUT":"Abmelden",
+        "label1": "E-Mail",
+        "label2": "Passwort",
+        "value": "Anmelden",
+        "Error1": "Gültige Mail eingeben",
+        "Error2": "Gültiges Passwort eingeben",
+        "Title": "Produktliste",
+        "Button": "Zum Warenkorb hinzufügen",
+         "Price": "Rs",
+         "pname": "Laptop",
+         "name" : "Name",
+         "details": "Einzelheiten",
+         "price": "Preis",
+         "photo": "Foto",
+         "actions": "Aktionen",
+         "total1": "Gesamtpreis",
+         "total2": "TotalItems",
+         "button": "Zur Kasse",
+         "Heading": "Melden Sie sich bei Ihrem Konto an"
+     
+ 
+ 
+     
+        
+                
+ 
+    }
+     
+     
+ }
