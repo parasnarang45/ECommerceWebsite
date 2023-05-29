@@ -4,6 +4,8 @@ import { CartService } from './cart.service';
 import { SharedService } from './shared.service';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { TranslateService } from '@ngx-translate/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { LayoutService } from './layout.service';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +16,7 @@ export class AppComponent {
   items=this.cart.getItems();
   supportLanguages=['en','bn','fr','de']
   blur:number=10;
-  constructor(public toastr:ToastrService, public sharedData:SharedService,public cart:CartService,private ngxService:NgxUiLoaderService,public translate:TranslateService){
+  constructor(public toastr:ToastrService, public sharedData:SharedService,public cart:CartService,private ngxService:NgxUiLoaderService,public translate:TranslateService,private layout:LayoutService,private responsive:BreakpointObserver){
     this.translate.addLangs(this.supportLanguages);
     this.translate.setDefaultLang('en');
        const browserlang=this.translate.getBrowserLang();
@@ -32,6 +34,15 @@ export class AppComponent {
      
    }
    ngOnInit():void{
+    
+    this.responsive.observe(Breakpoints.HandsetPortrait).subscribe(result=>{
+
+      if (result.matches) {
+        console.log("screens matches HandsetPortrait");
+      }
+    });
+
   
+      
    }
 }

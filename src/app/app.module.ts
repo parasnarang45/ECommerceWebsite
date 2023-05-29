@@ -26,6 +26,7 @@ import { EmptyCartComponent } from './empty-cart/empty-cart.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { InformationComponent } from './information/information.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { CategoriesComponent } from './categories/categories.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http,'assets/i18n/', '.json');
@@ -40,7 +41,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     CartComponent,
     HomeComponent,
     EmptyCartComponent,
-    InformationComponent
+    InformationComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
